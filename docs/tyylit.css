@@ -1,0 +1,932 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(OpenSans-VariableFont_wdth,wght.ttf);
+}
+
+body {
+    font-family: "Open Sans";
+}
+
+a:any-link{
+    color: white;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.Project-Banner {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+.Project-Banner__otsikko {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20;
+    font-size: 20px;
+}
+
+.Project-Banner__tekstit-linkit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 0 40 0;
+    font-size: 15px;
+}
+
+.Project-Banner__tekstit-linkit__teksti {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.sivun-yläpalkki {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-yläpalkki__palkki {
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    color: #fff;
+    font-size: 22;
+    padding: 5px 50px 5px 35px;
+    justify-content: space-around;
+}
+
+.sivun-yläpalkki__palkki__main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 0 20px;
+}
+
+.sivun-yläpalkki__palkki__main__otsikot:hover {
+    color: #808080;
+}
+
+.sivun-yläpalkki__palkki__main__otsikot {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-yläpalkki__palkki__main a::after {
+    content: "|";
+    padding: 0px 10px 0px 10px;
+}
+
+.sivun-yläpalkki__palkki__main a:last-child::after {
+    content: none;
+}
+
+.sivun-yläpalkki__palkki__main__otsikot__ikoni--valokoinen {
+    display: flex;
+}
+
+.sivun-yläpalkki__palkki__main__otsikot__ikoni--grey {
+    display: none;
+}
+
+.sivun-yläpalkki__palkki__main__otsikot:hover .sivun-yläpalkki__palkki__main__otsikot__ikoni--valokoinen {
+    display: none;
+}
+
+.sivun-yläpalkki__palkki__main__otsikot:hover .sivun-yläpalkki__palkki__main__otsikot__ikoni--grey {
+    display: flex;
+}
+
+.sivun-yläpalkki__palkki__main__otsikot__ikoni {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 0 0;
+}
+
+.sivun-yläpalkki__palkki__main__otsikot__logo {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 10px;
+}
+
+.sivun-yläpalkki__palkki__main__help:hover {
+    text-decoration: underline;
+}
+
+.sivun-yläpalkki__palkki__main__help {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-yläpalkki__palkki__toinen {
+    display: flex;
+    flex-direction: row;
+}
+
+.hakukenttä {
+    display: flex;
+    font-size: 19;
+    padding: 0 10px 0 17px;
+    border-radius: 10px;
+}
+
+.sivun-yläpalkki__palkki__haku {
+    display: flex;
+    flex-direction: row;
+    padding: 12px 0 12px 60px;
+}
+
+.sivun-yläpalkki__palkki__submit {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0 15px 20px;
+}
+
+.sivun-yläpalkki__palkki__submit__request {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 1px white;
+    border-radius: 8px;
+    padding: 10px 20px 10px 20px;
+    background-color: #191a1b;
+}
+
+.sivun-yläpalkki__palkki__sign {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 0 20px;
+
+}
+
+.sivun-yläpalkki__palkki__sign__in:hover{
+    background-color: white;
+    color: black;
+}
+
+.sivun-yläpalkki__palkki__sign__in {
+    display: flex;
+    flex-direction: row;
+    background-color: #4C5FD5;
+    border-radius: 8px;
+    padding: 10px 35px 10px 35px;
+}
+
+.sivun-alapalkki {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-alapalkki__sininen-palkki {
+    display: flex;
+    flex-direction: column;
+    background-color: #dadbf1;
+    padding: 0 0 115px 0;
+}
+
+.sivun-alapalkki__sininen-palkki__help {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-alapalkki__sininen-palkki__help__teksti {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 72;
+    padding: 80px 0 35px 0;
+}
+
+.hakukenttä-2 {
+    display: flex;
+    font-size: 19;
+    border-radius: 4px;
+    padding: 20;
+    flex: 4;
+}
+
+.sivun-alapalkki__sininen-palkki__help__haku-palkki:hover {
+    border-color: #4C5FD5;
+}
+
+.sivun-alapalkki__sininen-palkki__help__haku-palkki {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-right: 17rem;
+    margin-left: 17rem;
+    position: relative;
+}
+
+.sivun-alapalkki__sininen-palkki__help__haku-palkki__ikoni--musta {
+    display: flex;
+}
+
+.sivun-alapalkki__sininen-palkki__help__haku-palkki__ikoni--sininen {
+    display: none;
+}
+
+.sivun-alapalkki__sininen-palkki__help__haku-palkki:hover .sivun-alapalkki__sininen-palkki__help__haku-palkki__ikoni--musta {
+    display: none;
+}
+
+.sivun-alapalkki__sininen-palkki__help__haku-palkki:hover .sivun-alapalkki__sininen-palkki__help__haku-palkki__ikoni--sininen {
+    display: flex;
+}
+
+.sivun-alapalkki__sininen-palkki__help__haku-palkki__ikoni {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-self: center;
+    left: 675px;
+}
+
+.sivun-alapalkki__valkoinen-palkki {
+    display: flex;
+    flex-direction: column;
+    padding: 170px 115px 150px 115px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit {
+    display: flex;
+    flex-direction: column;
+    flex-direction: center;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen {
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px 110px 30px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1__ikoni {
+    display: flex;
+    flex-direction: column;
+    margin: 20;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1__teksti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 23px;
+    padding: 0 45px 25px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1__links {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1__links:hover{
+    text-decoration: underline;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1__linkki {
+    display: flex;
+    flex-direction: row;
+    font-size: 19px;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__1__ikoni-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 5px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2__ikoni {
+    display: flex;
+    flex-direction: column;
+    margin: 20;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2__teksti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 23px;
+    padding: 0 60px 25px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2__links {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2__links:hover{
+    text-decoration: underline;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2__linkki {
+    display: flex;
+    flex-direction: row;
+    font-size: 19px;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__ensimmäinen__2__ikoni-2 {
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+    padding: 0 0 0 5px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen {
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px 110px 30px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1__ikoni {
+    display: flex;
+    flex-direction: row;
+    margin: 20;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 0 20px 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1__teksti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 23px;
+    padding: 0 30px 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1__links {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1__links:hover{
+    text-decoration: underline;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1__linkki {
+    display: flex;
+    flex-direction: row;
+    font-size: 19px;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__1__ikoni-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 5px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2__ikoni {
+    display: flex;
+    flex-direction: row;
+    margin: 20;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2__teksti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 23px;
+    padding: 0 60px 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2__links {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2__links:hover{
+    text-decoration: underline;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2__linkki {
+    display: flex;
+    flex-direction: row;
+    font-size: 19px;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__toinen__2__ikoni-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 5px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas {
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px 0 30px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1__ikoni {
+    display: flex;
+    flex-direction: row;
+    margin: 20;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1__teksti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 23px;
+    padding: 0 60px 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1__links {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1__links:hover{
+    text-decoration: underline;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1__linkki {
+    display: flex;
+    flex-direction: row;
+    font-size: 19px;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__1__ikoni-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 5px;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2__ikoni {
+    display: flex;
+    flex-direction: row;
+    margin: 20;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2__teksti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 23px;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2__links {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2__links:hover{
+    text-decoration: underline;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2__linkki {
+    display: flex;
+    flex-direction: row;
+    font-size: 19px;
+    color: #4C5FD5;
+}
+
+.sivun-alapalkki__valkoinen-palkki__tekstit__kolmas__2__ikoni-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 5px;
+}
+
+.sivun-alapalkki__musta-palkki {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 45px 90px 40px 90px;
+    align-items: center;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot {
+    display: flex;
+    flex-direction: row;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1 {
+    display: flex;
+    flex-direction: column;
+    padding:0 60px 0 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1__tekstit {
+    display: flex;
+    flex-direction: column;
+    font-size: 16;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1__tekstit__trial:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1__tekstit__trial {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1__tekstit__price:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1__tekstit__price {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1__tekstit__down:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko1__tekstit__down {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2 {
+    display: flex;
+    flex-direction: column;
+    padding:0 50px 0 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit {
+    display: flex;
+    flex-direction: column;
+    font-size: 16;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit__blog:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit__blog {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit__help:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit__help {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit__release:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit__release {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit__status:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko2__tekstit__status {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3 {
+    display: flex;
+    flex-direction: column;
+    padding:0 25px 0 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some {
+    display: flex;
+    flex-direction: column;
+    font-size: 16;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__twitter:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__twitter {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__linkedin:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__linkedin {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__facebook:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__facebook {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__drib:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__drib {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__pod:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko3__some__pod {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4 {
+    display: flex;
+    flex-direction: column;
+    padding:0 110px 0 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__otsikko {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 24;
+    padding: 0 0 15px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__teksti {
+    display: flex;
+    flex-direction: column;
+    font-size: 16;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__teksti__about:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__teksti__about {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__teksti__career:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__teksti__career {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__teksti__legal:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__teksti__legal {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0 0 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__tekstit {
+    display: flex;
+    flex-direction: column;
+    font-size: 16;
+    padding: 30px 0 0 0;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__tekstit__contact {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__tekstit__posti:hover{
+    text-decoration: underline;
+}
+
+.sivun-alapalkki__musta-palkki__otsikot__otsikko4__tekstit__posti {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0 0 0;
+}
+
+.sivun-alapalkki__musta-palkki__copy-right {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 0 20px 55px;
+}
+
+.sivun-alapalkki__musta-palkki__copy-right__ikoni {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 30px 0;
+}
+
+.sivun-alapalkki__musta-palkki__copy-right__licens {
+    display: flex;
+    flex-direction: column;
+    font-size: 19;
+}
+
+.sivun-alapalkki__musta-palkki__copy-right__licens__copy {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__copy-right__licens__studio {
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0;
+}
+
+.sivun-alapalkki__musta-palkki__copy-right__licens__rights {
+    display: flex;
+    flex-direction: row;
+}
